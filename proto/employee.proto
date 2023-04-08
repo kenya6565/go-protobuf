@@ -1,13 +1,19 @@
 syntax = "proto3";
 
-// comment
-
-/*
-
-*/
-
 message Employee {
+  // 1番からスタートする必要もない
   int32 id = 1;
   string name = 2;
   string email = 3;
+  Occupation occupation = 4;
+}
+
+// 列挙型
+enum Occupation {
+  // ０からスタートしないといけない。
+  // 0は基本的にUNKNOWNと付ける
+  OCCUPATION_UNKNOWN = 0;
+  ENGINEER = 1;
+  DESIGNER = 2;
+  MANAGER = 3;
 }
