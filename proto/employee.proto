@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+package emplpyee;
+
+import "proto/date.proto";
+
 message Employee {
   // 1番からスタートする必要もない
   int32 id = 1;
@@ -20,6 +24,7 @@ message Employee {
     string text = 7;
     Video video = 8;
   }
+  date.Date birthday = 9;
 }
 
 // 列挙型
