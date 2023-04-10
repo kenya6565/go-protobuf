@@ -1,7 +1,11 @@
 syntax = "proto3";
 
 // package管理することで他ファイルで同一messageがあった場合も衝突を避ける事ができる
+// これであれば出力されるgoファイルはpbというpackageに所属する
 package date;
+
+// 変換後のgoファイルのpackageになる
+option go_package = "./pb";
 
 message Date {
   int32 year = 1;
