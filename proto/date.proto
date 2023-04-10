@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+// package管理することで他ファイルで同一messageがあった場合も衝突を避ける事ができる
 package date;
 
 message Date {
