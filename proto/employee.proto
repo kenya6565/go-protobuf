@@ -19,7 +19,7 @@ message Employee {
   repeated string phone_number = 5;
 
   // map<キーの型, バリューの型> バリュー = タグ番号
-  map<string, Project.Company> project = 6;
+  map<string, Company.Project> project = 6;
 
   // 複数の型のどれか1つを値として持つフィールドを定義する時に使う
   // 従業員のprofileフィールドをVideoもしくはstring型で持つ例
