@@ -34,7 +34,7 @@ func main() {
 	}
 
 	// write serialized data as file
-	if err := ioutil.WriteFile("text.bin", binData, 0666); err != nil {
+	if err := ioutil.WriteFile("test.bin", binData, 0666); err != nil {
 		log.Fatalln("Can't write", err)
 	}
 }
