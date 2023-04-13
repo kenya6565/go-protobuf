@@ -10,6 +10,7 @@ import (
 )
 
 func main() {
+	// define struct using message which is defined in proto file
 	employee := &pb.Employee{
 		Id:          1,
 		Name:        "Suzuki",
