@@ -55,10 +55,20 @@ func main() {
 
 	// fmt.Println(readEmployee)
 	m := jsonpb.Marshaler{}
+
+	// convert go structure to json string
 	out, err := m.MarshalToString(employee)
 	if err != nil {
 		log.Fatalln("Can't marshal to json", err)
 	}
 
-	fmt.Println(out)
+	// fmt.Println(out)
+
+	readEmployee := &pb.Employee{}
+	// convert json string to go structure
+	if err := jsonpb.UnmarshalString(out, readEmployee); err != nil {
+		log.Fatalln("Can't unmarshal from json", err)
+	}
+
+	fmt.Println(readEmployee)
 }
